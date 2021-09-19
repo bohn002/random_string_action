@@ -1,21 +1,21 @@
-name: 'Random String"
-description: "Generates a random string"
-author: "Nate Bohn"
+name: 'Random String'
+description: 'Generates a random string'
+author: 'Nate Bohn'
 inputs:
     char_type:
-        description: "Type of string. Can choose from lower, upper or mixed."
+        description: 'Type of string. Can choose from lower, upper or mixed.'
         required: false
-        default: "mixed"
+        default: 'mixed'
     char_length:
-        description: "length of string"
+        description: 'length of string'
         required: false
-        default: "8"
+        default: '8'
 outputs:
     random_string:
-        description: "Output"
+        description: 'Output'
 runs:
-    using: "docker"
-    image: "Dockerfile"
+    using: 'docker'
+    image: 'Dockerfile'
     args:
         - ${{ inputs.type }}
         - ${{ inputs.length }}
