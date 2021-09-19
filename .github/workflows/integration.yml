@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@master
       - name: Self test
         id: selftest
-        uses: bohn002/random_string_action@master
+        uses: bohn002/random_string_action@main
         with:
           char_type: "mixed"
           char_length: "8"
