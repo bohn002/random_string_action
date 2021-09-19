@@ -1,0 +1,17 @@
+name: Integration Test
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Self test
+        id: selftest
+        uses: bohn002/random_string_action@master
+        with:
+          char_type: "mixed"
+          char_length: "8"
+
+      - name: Check outputs
+        run: |
+          echo "${{ steps.selftest.outputs.random_string }}"
