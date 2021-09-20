@@ -7,7 +7,7 @@ inputs:
         required: false
         default: 'mixed'
     char_length:
-        description: 'length of string'
+        description: 'length of string. 1-128'
         required: false
         default: '8'
 outputs:
