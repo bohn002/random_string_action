@@ -3,6 +3,7 @@ import string
 import random
 
 def main():
+    print(os.environ['RANDOM'])
     letters = ""
     char_type = os.environ['INPUT_CHAR_TYPE']
     char_length = int(os.environ['INPUT_CHAR_LENGTH'])
